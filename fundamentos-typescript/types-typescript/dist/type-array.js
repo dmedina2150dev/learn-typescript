@@ -1,0 +1,12 @@
+"use strict";
+let users;
+users = ['luixaviles', 'paparazzi', 'lensqueen'];
+let otherUser = ['luixaviles', 'paparazzi', 'lensqueen'];
+let pictureTitles;
+pictureTitles = ['fafa', 'vacation', 'Landscape'];
+console.log('first User: ', users[0]);
+console.log('first title: ', pictureTitles[1]);
+console.log('users.length', users.length);
+users.push('TuMama');
+users.sort();
+console.log('users', users);

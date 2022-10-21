@@ -1,0 +1,17 @@
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+let user;
+user = [1, 'dmedina'];
+console.log('user', user);
+console.log('username', user[1]);
+console.log('id', user[0]);
+let userInfo;
+userInfo = [2, 'alguien', true];
+console.log('userInfo', userInfo);
+let array = [];
+array.push([1, 'dmedina']);
+array.push([2, 'papa']);
+array.push([3, 'dmes']);
+console.log('array tupla', array);
+array[2][1] = array[2][1].replace("dmes", "ddoliveira");
+console.log('array tupla MODIFICADO', array);

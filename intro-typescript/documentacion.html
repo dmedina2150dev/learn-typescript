@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TypeScript POO </title>
+</head>
+<body>
+    <h2>POO</h2>
+    <p>Es un paradigma de programacion, y forma de programar que nos
+        permite estructurar de una manera adecuada nuestro codigo y segur 
+        mejores practicas. Dividiendo todo en Objetos. clases o entidades. 
+    </p>
+
+    <h2>TypeScript</h2>
+    <p>Es un super set de javaScript Desarrollado por microsoft, 
+        del 85% al 90% es javaScript nativo, y añade nuevos estandares de ECMAScript 6 y 7,
+        posee un tipado fuerte, es decir que se puede indicar el tipo de dato que contiene 
+        una variable, una programacion orientada a objetos mejorada, es un lenguaje interpretado
+        que se transpila a javaScript. Es decir que codificamos en TypeScript y el 
+        transpilador que posee lo transforma o lo transpila a javaScript, para que todos 
+        los navegadores puedan entender. Y la extencion de los archivos es (.ts).
+        Ademas este es el lenguaje nativo para trabajar en Angular.
+    </p>
+    <p>tsc -v  Para ver la version</p>
+
+    <p>tsc nombreArchivo.ts  para que los transpile</p>
+
+    <p>tsc -w *.ts  Para que este pendiente de todos los archivos y los campos </p>
+
+
+    <h3>Variables</h3>
+    <p>
+        string
+        let cadena: string = "Dajan Mdina";
+    </p>
+
+    <p>
+        number
+        let edad: number = 28;
+    </p>
+    <p>
+        boolean
+        let siono: boolean = true;
+    </p>
+
+    <p>
+        any
+        let cualquiera: any = 23;
+    </p>
+
+    <p>
+        array
+        var lenguajes: Array<string> = ["php","js", "ts"]; 
+    </p>
+
+    <p>
+        otra forma
+        let years: number[] = [12, 34, 56];
+    </p>
+
+    <p>
+        multiples tipos de datos
+        // string
+        let cadena2: string | number = "Dajan Mdina";
+        console.log(cadena2);
+        cadena2 = 20;
+        console.log(cadena2);
+    </p>
+
+    <p>
+        tipos de datos personalizados
+        type letrasonumeros = string | number;
+
+        let cadena3: letrasonumeros = "Darwin Medina";
+        console.log(cadena3);
+    </p>
+
+
+    <p>
+        // Clase (Es el molde del objeto)
+        class Camiseta{
+
+            // Propiedades (Caracteristicas del objeto) 
+            /**
+            *  Si la propoedades esta public cualquier instancia de
+            * la clase las puede modificar
+            *  
+            * Si esta private solo los metodos de la dicha clase puede modificarlos
+            * 
+            * 
+            * */   
+            private color: string;
+            private modelo: string;
+            private marca: string;
+            private talla: string;
+            private precio: number;
+
+
+            // Metodos (que son funciones o acciones que tendra el objeto)
+
+            // consturctor
+            constructor(color, modelo, marca, talla, precio){
+                this.marca = marca;
+                this.modelo = modelo;
+                this.color = color;
+                this.talla = talla;
+                this.precio = precio;
+            }
+
+            /**
+            * Metodo para cambiar el color
+            * setColor
+            */
+            public setColor(color) {
+                this.color = color;
+            }
+
+            /**
+            * getColor
+            */
+            public getColor() {
+                return this.color;
+            }
+
+
+
+        }
+
+        var camiseta = new Camiseta("Rojo", "manga larga","nike", "L", 14);
+        // camiseta.setColor("rojo");
+        // camiseta.getColor();
+
+        var plallera = new Camiseta("Azul", "Manga corta", "addidas", "M", 20);
+        plallera.setColor("Azul");
+        // camiseta.getColor();
+
+        console.log(camiseta.getColor(), plallera.getColor());
+    </p>
+
+    <p>
+        <h3>Decoradores</h3>
+        <p>un decorador es un patron de diseño que nos permite mediante unos metadato que nosotros
+            le definimos de acuerdo a una clase, hacer una copia de esa misma clase
+            y modificarlas y que haga unas cosas u otras dependiendo los parametros
+            que les pasemos.
+        </p>
+    </p>
+</body>
+</html>
